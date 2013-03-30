@@ -1,0 +1,64 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TomatoTimerWP8.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="番茄工作法" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="关于" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="ContentPanel" Margin="12,0,12,0">
+                <TextBlock TextWrapping="Wrap" FontSize="24">
+        		<Run Text="番茄工作法（Pomodoro Technique）是弗朗西斯科·西里在80年代发明的一种时间管理方法。"/>
+        		<LineBreak/>
+        		<Run Text="番茄工作法的名字来源于一种番茄形的厨房定时器。"/>
+                <LineBreak/>
+        		<Run Text="番茄工作法的做法:"/>
+                <LineBreak/>
+        		<Run Text="1、每天开始的时候规划今天要完成的几项任务，将任务逐项写在列表里"/>
+                <LineBreak/>
+        		<Run Text="2、设定你的番茄钟（例如本程序），时间是25分钟"/>
+                <LineBreak/>
+        		<Run Text="3、开始完成第一项任务，直到番茄钟响铃或提醒（25分钟到）"/>
+                <LineBreak/>
+        		<Run Text="4、停止工作，并在列表里该项任务后画个X"/>
+                <LineBreak/>
+        		<Run Text="5、休息3~5分钟，活动、喝水、方便等等"/>
+                <LineBreak/>
+        		<Run Text="6、开始下一个番茄钟，继续该任务。一直循环下去，直到完成该任务，并在列表里将该任务划掉"/>
+                <LineBreak/>
+        		<Run Text="7、每四个番茄钟后，休息25分钟"/>
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="24" Margin="0,10,0,5" Text="相关资料："/>
+                <HyperlinkButton TargetName="website"  Content="官方网站" NavigateUri="http://www.pomodorotechnique.com/" HorizontalAlignment="Left"/>
+                <HyperlinkButton TargetName="wikipedia"  Content="Wikipedia" NavigateUri="http://en.wikipedia.org/wiki/Pomodoro_Technique" HorizontalAlignment="Left"/>
+                <HyperlinkButton TargetName="baidu"  Content="百度百科" NavigateUri="http://baike.baidu.com/view/8191000.htm" HorizontalAlignment="Left"/>
+                <HyperlinkButton TargetName="baidu2"  Content="百度百科" NavigateUri="http://baike.baidu.com/view/5259318.htm" HorizontalAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" FontSize="24" Margin="0,20,0,5" Text="相关书籍："/>
+                <HyperlinkButton TargetName="book"  Content="番茄工作法图解" NavigateUri="http://book.douban.com/subject/5916234/" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</phone:PhoneApplicationPage>
